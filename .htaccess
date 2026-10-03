@@ -1,0 +1,105 @@
+# ==========================================================================
+# CROFACE — configuração do servidor (Apache / Locaweb)
+# ATENÇÃO: só ative depois de confirmar que o certificado TLS (HTTPS) está
+# funcionando no domínio. Veja PUBLICACAO na pasta _entrega.
+# ==========================================================================
+
+Options -Indexes -MultiViews
+ServerSignature Off
+AddDefaultCharset utf-8
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1) HTTP -> HTTPS e www -> sem www, em um único redirecionamento 301.
+  #    O teste de X-Forwarded-Proto evita loop quando a Locaweb termina o TLS
+  #    em um proxy na frente do Apache.
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://croface.com.br%{REQUEST_URI} [L,R=301,NE]
+
+  RewriteCond %{HTTP_HOST} ^www\.croface\.com\.br$ [NC]
+  RewriteRule ^ https://croface.com.br%{REQUEST_URI} [L,R=301,NE]
+
+  # 2) Endereços do site antigo -> página nova (preserva links e buscas antigas).
+  RewriteRule ^contato\.htm$ /#contato [L,R=301,NE]
+  RewriteRule ^(top|main|index)\.htm$ / [L,R=301]
+
+  # 3) .../index.html -> .../ (evita URL duplicada, em qualquer pasta)
+  RewriteCond %{THE_REQUEST} \s/(.*/)?index\.html[\s?] [NC]
+  RewriteRule ^(.*/)?index\.html$ /$1 [L,R=301]
+</IfModule>
+
+# 4) O site é 100% estático: nenhum script executável deve responder.
+#    Bloqueia também remanescentes do site antigo (ex.: script de envio de e-mail).
+<FilesMatch "\.(php[0-9]?|phtml|phar|pl|py|cgi|asp|aspx|jsp|sh)$">
+  Require all denied
+</FilesMatch>
+# Arquivos ocultos, de backup e de documentação não devem ser servidos.
+<FilesMatch "(^\.|\.(bak|old|orig|swp|log|sql|md|zip|ini|env)$)">
+  Require all denied
+</FilesMatch>
+RedirectMatch 404 /_entrega(/|$)
+
+# ==========================================================================
+# Cabeçalhos de segurança
+# ==========================================================================
+<IfModule mod_headers.c>
+  # HSTS: 1 ano. Sem includeSubDomains (subdomínios como webmail podem não ter HTTPS).
+  Header always set Strict-Transport-Security "max-age=31536000" "expr=%{HTTPS} == 'on' || %{HTTP:X-Forwarded-Proto} == 'https'"
+
+  # CSP restritiva: nenhum script inline, tudo local. Única exceção: o mapa do
+  # Google, carregado em iframe só quando o visitante clica em "Mostrar mapa".
+  # Se instalar GA4/GTM no futuro, acrescentar os domínios deles aqui.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; manifest-src 'self'; upgrade-insecure-requests"
+
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header unset X-Powered-By
+  Header always unset X-Powered-By
+
+  # Cache: HTML sempre revalida; CSS/JS 7 dias (troque ?v=1 no HTML ao editar);
+  # imagens e fontes 1 ano.
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  <FilesMatch "\.(woff2|webp|jpg|jpeg|png|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000"
+  </FilesMatch>
+</IfModule>
+
+# ==========================================================================
+# Tipos de arquivo, compressão e expiração
+# ==========================================================================
+<IfModule mod_mime.c>
+  AddType font/woff2 .woff2
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript text/javascript application/json application/ld+json application/xml image/svg+xml application/manifest+json
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/javascript "access plus 7 days"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>

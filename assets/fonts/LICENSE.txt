@@ -1,0 +1,3 @@
+Inter Tight — Copyright 2022 The Inter Tight Project Authors (https://github.com/googlefonts/inter-tight)
+Licenciada sob a SIL Open Font License, versão 1.1 — https://openfontlicense.org
+Arquivo subsetado (latim) para uso no site da CROFACE.

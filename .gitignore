@@ -1,0 +1,6 @@
+# Sistema
+.DS_Store
+
+# Ferramentas locais (não fazem parte do site)
+.claude/
+.impeccable/

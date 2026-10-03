@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_entrega/
+
+Sitemap: https://croface.com.br/sitemap.xml
