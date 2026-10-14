@@ -4,6 +4,51 @@
 
 ---
 
+## v4 — Ajustes do cliente (13/10/2026)
+
+**O que mudou**
+- **Layout claro e limpo:** header, hero, capas das páginas, seções de destaque e rodapé passaram para fundos claros. O marinho ficou só para texto, botões e detalhes.
+- **Uma mensagem por tela:** as seções principais da home ocupam a altura da tela, com uma ideia central cada.
+- **Home reorganizada:** hero emocional → **câmera intraoral** (diferencial) → centro de longevidade → queixas (com **dor de dente** como primeira) → primeira consulta → tratamentos → **Quem somos** (fotos reais e currículo que abre ao clicar) → **convênios** → para quem cuida → onde estamos. Saiu a seção de esterilização, equipamento e estrutura (ela continua em "Como atendemos").
+- **Página nova: Clínica geral** (`/clinica-geral-vila-mariana/`), com dor de dente, dente quebrado, sensibilidade, gengiva, dente escurecido, bruxismo e tratamento de canal. As queixas da home levam para cá, e não mais para "Limpeza e prevenção".
+- **Profilaxia e prevenção:** a página antiga de limpeza agora explica a profilaxia.
+- **Prótese:** entraram a prótese flexível e uma seção própria de prótese sobre implantes.
+- **Sem especialidades:** em "Quem somos", todos aparecem só como cirurgiões-dentistas, com o CRO. A página de cirurgia passou a se chamar **Cirurgias odontológicas** (`/cirurgias-odontologicas-vila-mariana/`), sem o termo "bucomaxilofacial" e sem atribuir especialidade a ninguém.
+- **Horário:** segunda a sexta, das 9h às 21h; sábados, domingos e feriados com agendamento. Atualizado no site, no menu, no rodapé e nos dados estruturados (JSON-LD).
+- **Acessibilidade:** banheiro adaptado.
+- **Textos do cliente aplicados** (documento "Alterações site"): longevidade (com nutrição), "como você come, fala e dorme" com bruxismo, primeira consulta, conforto, o que acontece entre um paciente e outro, depois do plano e Quem somos.
+- **Sem gerúndios:** varredura em todo o texto visível e nos textos alternativos das fotos.
+- **Antes e depois:** em implante, prótese, clínica geral e profilaxia, com controle de arrastar (no toque e no teclado) ou de passar o mouse.
+- **Urgência:** botão vermelho no canto inferior direito, que pisca por 5 segundos. Ele abre orientação, um WhatsApp de urgência, o telefone e o aviso de emergência grave (pronto-socorro ou 192).
+- **Funil nas páginas de serviço:** chamada no meio da página ("É o seu caso?"), seção "Como agendar a sua avaliação" em 3 passos e faixa final.
+- **Fotos reais aplicadas:** equipe (retratos e consultório), menu, Como atendemos, idosos, prótese (bancada), profilaxia e exame, longevidade (paciente idosa sorrindo) e biossegurança (consultório e paramentação).
+
+**Atenção — antes e depois.** O briefing original proibia, e o cliente agora pediu. Pela Resolução CFO 196/2019, a divulgação de imagens de diagnóstico e de resultado final passou a ser permitida, mas com **autorização expressa por escrito do paciente** e dentro do Código de Ética (sem sensacionalismo nem promessa de resultado). Por isso, o componente traz o aviso "publicado com autorização" e o campo do profissional responsável. **Confirmar com o CRO-SP antes de publicar as imagens reais.**
+
+**Urgência em loop.** A pedido do cliente, o botão tem um pulso suave contínuo (anel que se expande a cada ~2,4 s e ponto que "respira"), sem piscadas rápidas: fica bem abaixo do limite de 3 piscadas por segundo, então sem risco para pessoas fotossensíveis. A animação pausa ao passar o mouse, no foco do teclado e com o painel aberto, e é desligada para quem ativou "reduzir movimento" no sistema. Observação: a WCAG 2.2.2 recomenda um controle de pausa para animações que duram mais de 5 s; o respeito à preferência do sistema cobre a maior parte dos casos.
+
+**Pendências novas (cliente)**
+- [x] Resumo profissional em composição padrão (frase-resumo + linhas Atuação / Formação / Cursos; linha sem informação não aparece). Dra. Renata e Dr. Marcelo aplicados.
+- [ ] Resumo profissional do Dr. Wesley (frase-resumo, atuação, formação, cursos). Hoje o currículo dele mostra só "Cirurgião-dentista da equipe da CROFACE."
+- [ ] Dr. Marcelo: confirmar o **registro da especialidade em Saúde Coletiva no CRO-SP**. Pelo Código de Ética Odontológica, "especializado/especialista" só pode ser anunciado com o registro; sem ele, o texto passa a "pós-graduação em Saúde Coletiva". (O aviso visível foi retirado da home a pedido; a confirmação continua pendente.)
+- [x] CRO do Dr. Wesley (CROSP 171404) e do Dr. Marcelo (CROSP 169331).
+- [ ] Equipe multidisciplinar: nome e CRO de quem atende endodontia, ortodontia e implantodontia.
+- [x] **"Em qualquer idade." em letra de assinatura** no hero: fonte Allura (SIL OFL 1.1, 25 KB, hospedada em `assets/fonts/`, licença em `LICENSE-allura.txt`), em tamanho grande e reta, azul do logo, efeito de escrita da esquerda para a direita (desligado para quem pede menos movimento). O texto continua real dentro do H1.
+- [x] **Home sem [CONFIRMAR]:** retirados o aviso da equipe multidisciplinar (nomes/CRO continuam pendentes), o ponto de referência na rua, o aviso de especialidade do Dr. Marcelo e os campos vazios do Dr. Wesley. As coordenadas `geo` (que estavam como texto de placeholder e invalidavam os dados estruturados) foram removidas de todas as páginas até termos latitude/longitude reais.
+- [x] **Curadoria de imagens (14/10):** trocadas 4 fotos de banco genéricas (idosos posando em fundo liso, sem relação com a clínica) e 3 placeholders por recortes de fotos reais da CROFACE: `consulta-4-diagnostico` (Dr. Marcelo no consultório, logo no monitor), `consulta-5-plano` e `prevencao-3-orientacao` (Dra. Renata em atendimento), `cirurgia-3-pos` (Dr. Wesley no consultório), `cirurgia-2-sala` e `implante-2-cirurgia` (consultório), `implante-1-avaliacao` (Dr. Marcelo em atendimento). Legendas (alt) reescritas para descrever o que aparece de fato.
+- [x] **Logo oficial** (CorelDRAW, 10/11/2025) aplicado: versão horizontal no cabeçalho (`logo-croface-h.svg`, montada a partir das peças do logo: símbolo à esquerda, nome à direita), versão vertical original no rodapé e na 404 (`logo-croface.svg`), símbolo no favicon/ícone do celular e PNG 600×600 para o Google (`logo-croface.png`). **Confirmar com a clínica se a versão horizontal pode ser usada.** O logo diz "Odontologia"; o site mantém o nome "CROFACE — Centro de Reabilitação Orofacial" no texto.
+- [x] Convênios: Plena Saúde, Sempre Odonto, Ideal Odonto, OdontoGroup, Dental Plus, Dental Uni e Dentalpar. Os 6 logos foram baixados dos sites oficiais das operadoras (`assets/img/convenios/`).
+- [x] **Dental Plus:** logo enviado pelo cliente e aplicado (`convenios/dental-plus`). Site oficial da operadora: planodentalplus.com.br (Santo André, SP; selo ANS no site, sem número publicado). O domínio dentalplus.com.br é de outra empresa, uma loja de produtos.
+- [ ] Pedir a cada operadora o kit de marca oficial: o contrato de credenciamento costuma ter regras de uso do logo. O arquivo da Dentalpar tem baixa resolução (168×33).
+- [ ] Como funciona a urgência fora do horário.
+- [x] Acessibilidade: no térreo, sem degraus na entrada, com banheiro adaptado (confirmado).
+- [ ] **Autorização de uso de imagem** dos pacientes que aparecem nas fotos (paciente com a Dra. Renata, paciente idosa com o Dr. Wesley e paciente idosa com o Dr. Marcelo).
+- [ ] Foto do hero da home: a atual é de banco de imagem. Substituir por foto real autorizada.
+- [ ] Fotos que ainda faltam: **câmera intraoral com a imagem na tela** (prioridade, porque é o diferencial), dentista conversando com paciente (etapa 1 da consulta), exames, diagnóstico, plano, autoclave, instrumental embalado, fachada, Conatus, capas de implante e de cirurgias, e os 4 pares de antes e depois.
+- [ ] Revisar a chamada emocional do hero (opções em SECOES-E-IMAGENS.md).
+
+---
+
 ## 1. Arquivos
 
 ```
@@ -41,14 +86,14 @@ Todas aparecem no site entre `[COLCHETES]`.
 
 **Profissionais e responsabilidade técnica**
 - [x] Responsável técnica: **Dra. Renata Cristina F. Beltrame — CROSP 170047** (confirmado; aparece no hero e no rodapé).
-- [ ] CRO-SP do Dr. Wesley Santos Lestido.
+- [x] Dr. Wesley Santos Lestido — CROSP 171404.
 - [ ] Se o Dr. Wesley tem **registro de especialista** em Cirurgia e Traumatologia Bucomaxilofacial no CRO. Sem registro, o site não pode usar "especialista" e o texto deve ficar como está ("cirurgião-dentista · cirurgia bucomaxilofacial").
-- [ ] Especialidade/área de atuação e CRO do Dr. Marcelo Lisboa.
+- [x] Dr. Marcelo Lisboa — CROSP 169331 (aparece como cirurgião-dentista, sem especialidade).
 - [ ] Área de atuação da Dra. Renata (e se tem especialidade registrada).
 
 **Clínica**
 - [ ] Horário de atendimento (dias e horas; o Google indica fechamento às 21h). Atualizar em 3 lugares + JSON-LD.
-- [ ] CNPJ.
+- [x] CNPJ 62.849.183/0001-71 (rodapé de todas as páginas e `taxID` no JSON-LD).
 - [ ] Andar/sala dentro do prédio e ponto de referência na rua.
 - [ ] Acessibilidade: elevador ou rampa, degraus, banheiro adaptado, estacionamento ou local de embarque/desembarque.
 - [ ] Se existe telefone fixo além do WhatsApp (hoje o "Ligar" usa o mesmo número do WhatsApp).

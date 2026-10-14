@@ -4,3 +4,6 @@
 # Ferramentas locais (não fazem parte do site)
 .claude/
 .impeccable/
+
+# Material de trabalho (fotos brutas otimizadas; não faz parte do site)
+_fotos-web/

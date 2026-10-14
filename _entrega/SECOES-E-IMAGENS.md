@@ -1,5 +1,15 @@
 # CROFACE — Seções e imagens do site
 
+> **Atualizado em 13/10/2026 (v4).** A home e as páginas mudaram; veja o resumo em ENTREGA.md. Fotos reais já aplicadas: `equipe-*` (retratos e consultório), `menu-recepcao`, `atendimento-hero`, `idosos-hero`, `idosos-atendimento`, `prevencao-hero`, `clinica-hero`, `protese-hero`, `protese-1/2/3`, `prevencao-1/2`, `longevidade-consultorio` (Dra. Renata no consultório; substituiu a selfie), `avaliacao-exame`, `consulta-1-exame`, `seg-estrutura-consultorio`, `seg-equip-paramentacao`. Novas fotos a captar: `camera-intraoral` (prioridade) e os pares `antes-*` / `depois-*` (implante, protese, clinica, prevencao), com autorização por escrito do paciente.
+>
+> **Opções de chamada emocional para o hero** (no ar hoje: a primeira):
+> 1. Comer o que gosta. Sorrir sem receio. Em qualquer idade.
+> 2. Volte a pedir o que quiser no cardápio.
+> 3. A mesa de domingo é melhor quando nada incomoda.
+> 4. Rir sem cobrir a boca. Comer sem escolher pelo dente.
+> 5. Mais anos à mesa, ao lado de quem você ama.
+
+
 Mapa de todas as páginas: o que cada seção faz, o que ela diz e qual foto precisa.
 Hoje todas as fotos são placeholders marcados **FOTO A CAPTAR**. Para trocar, salve a foto real em `assets/img/` com o **mesmo nome**, em **.jpg e .webp**.
 

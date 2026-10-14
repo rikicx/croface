@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /_entrega/
+Disallow: /_fotos-web/
 
 Sitemap: https://croface.com.br/sitemap.xml

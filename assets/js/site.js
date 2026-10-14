@@ -198,7 +198,10 @@
     });
     // Fotos do conteúdo (exceto capas, parallax e a foto fixa, que têm movimento próprio).
     document.querySelectorAll('main picture').forEach(function (p) {
-      if (p.closest('.hero, .page-hero, .scrolly__img, .stepper__media') || p.querySelector('[data-parallax]')) return;
+      // Logos de convênio ficam de fora: a <picture> deles é display:contents (sem caixa) e o
+      // IntersectionObserver nunca a veria — no Safari a imagem ficaria recortada para sempre.
+      if (p.closest('.hero, .page-hero, .scrolly__img, .stepper__media, .ba, .cv-dialog, .plans') || p.querySelector('[data-parallax]')) return;
+      if (getComputedStyle(p).display === 'contents') return;
       p.classList.add('reveal-img');
     });
 
@@ -446,6 +449,41 @@
     });
   }
 
+  /* ---------- Antes e depois: arrastar (toque/teclado) ou passar o mouse revela ---------- */
+  function initBeforeAfter() {
+    document.querySelectorAll('[data-ba]').forEach(function (ba) {
+      var range = ba.querySelector('.ba__range');
+      function set(v) { ba.style.setProperty('--pos', v + '%'); if (range) range.value = v; }
+      if (range) range.addEventListener('input', function () { set(range.value); });
+      ba.addEventListener('pointermove', function (e) {
+        if (e.pointerType !== 'mouse') return; // no toque, o próprio controle deslizante já acompanha o dedo
+        var r = ba.getBoundingClientRect();
+        set(Math.max(0, Math.min(100, ((e.clientX - r.left) / r.width) * 100)).toFixed(1));
+      });
+      set(50);
+    });
+  }
+
+  /* ---------- Quem somos: abre o currículo completo em uma janela ---------- */
+  function initDialogs() {
+    document.querySelectorAll('[data-dialog]').forEach(function (btn) {
+      var dlg = document.getElementById(btn.getAttribute('data-dialog'));
+      if (!dlg || typeof dlg.showModal !== 'function') return;
+      btn.addEventListener('click', function () { dlg.showModal(); track('curriculo_' + dlg.id); });
+      dlg.querySelectorAll('[data-close]').forEach(function (c) { c.addEventListener('click', function () { dlg.close(); }); });
+      dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); }); // clique fora fecha
+    });
+  }
+
+  /* ---------- Urgência: fecha o painel ao clicar fora ou com Esc ---------- */
+  function initUrgent() {
+    var u = document.querySelector('.urgent');
+    if (!u) return;
+    document.addEventListener('click', function (e) { if (u.open && !u.contains(e.target)) u.open = false; });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && u.open) { u.open = false; u.querySelector('summary').focus(); } });
+    u.addEventListener('toggle', function () { if (u.open) track('urgencia_aberta'); });
+  }
+
   /* ---------- Mapa: carrega o Google Maps só quando pedido ---------- */
   function initMap() {
     document.querySelectorAll('[data-map-src]').forEach(function (map) {
@@ -508,6 +546,9 @@
     initHscroll();
     initCarousels();
     initMap();
+    initBeforeAfter();
+    initDialogs();
+    initUrgent();
     initShare();
     initTracking();
   }

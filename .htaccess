@@ -42,6 +42,8 @@ ErrorDocument 404 /404.html
   Require all denied
 </FilesMatch>
 RedirectMatch 404 /_entrega(/|$)
+# Pastas de trabalho que não fazem parte do site (não enviar; bloqueadas por garantia).
+RedirectMatch 404 /(_fotos-web|\.claude|\.impeccable|\.git)(/|$)
 
 # ==========================================================================
 # Cabeçalhos de segurança
