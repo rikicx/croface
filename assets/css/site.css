@@ -14,7 +14,7 @@
   font-style: normal;
   font-display: swap;
 }
-/* Allura (SIL OFL 1.1, ver assets/fonts/LICENSE-allura.txt) — só no "Em qualquer idade." do hero */
+/* Allura (SIL OFL 1.1, ver assets/fonts/LICENSE-allura.txt) — só no "mais plena" do hero */
 @font-face {
   font-family: "Allura";
   src: url("../fonts/allura-latin.woff2") format("woff2");
@@ -1299,7 +1299,7 @@ body.menu-open .quick-actions { display: none; }
 .cv__fact dd { margin: 0; color: var(--ink); }
 .cv__body .mt { margin-top: 0; }
 
-/* v5 — "Em qualquer idade." como assinatura */
+/* v5 — "mais plena" como assinatura */
 .hero__sign {
   display: block; position: relative; z-index: 1;
   margin: -.08em -.5em .04em;
@@ -1342,3 +1342,17 @@ body.menu-open .quick-actions { display: none; }
 /* v5 — nome do dentista em uma linha no resumo profissional; a letra reduz conforme a largura */
 .cv__body { container-type: inline-size; }
 .cv__body h2 { white-space: nowrap; font-size: min(clamp(1.5rem, 1.2rem + 1vw, 2.125rem), 6.4cqi); }
+
+/* v5 — risco à mão sob "mais plena", desenhado depois da escrita */
+.hero__sign-text { position: relative; display: inline-block; }
+.hero__stroke {
+  position: absolute; left: 2%; right: 2%; bottom: -.04em; width: 96%; height: .22em;
+  overflow: visible; pointer-events: none;
+}
+.hero__stroke path {
+  fill: none; stroke: #2fa9cf; stroke-width: 4; stroke-linecap: round; vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1; stroke-dashoffset: 1;
+  animation: stroke-draw .9s cubic-bezier(.65, 0, .35, 1) 2.2s forwards;
+}
+@keyframes stroke-draw { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .hero__stroke path { animation: none; stroke-dashoffset: 0; } }

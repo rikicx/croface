@@ -3,7 +3,7 @@
 > **Atualizado em 13/10/2026 (v4).** A home e as páginas mudaram; veja o resumo em ENTREGA.md. Fotos reais já aplicadas: `equipe-*` (retratos e consultório), `menu-recepcao`, `atendimento-hero`, `idosos-hero`, `idosos-atendimento`, `prevencao-hero`, `clinica-hero`, `protese-hero`, `protese-1/2/3`, `prevencao-1/2`, `longevidade-consultorio` (Dra. Renata no consultório; substituiu a selfie), `avaliacao-exame`, `consulta-1-exame`, `seg-estrutura-consultorio`, `seg-equip-paramentacao`. Novas fotos a captar: `camera-intraoral` (prioridade) e os pares `antes-*` / `depois-*` (implante, protese, clinica, prevencao), com autorização por escrito do paciente.
 >
 > **Opções de chamada emocional para o hero** (no ar hoje: a primeira):
-> 1. Comer o que gosta. Sorrir sem receio. Em qualquer idade.
+> 1. Sorrisos saudáveis para uma vida mais plena. (em uso; definido pelo cliente em 16/10/2026)
 > 2. Volte a pedir o que quiser no cardápio.
 > 3. A mesa de domingo é melhor quando nada incomoda.
 > 4. Rir sem cobrir a boca. Comer sem escolher pelo dente.
