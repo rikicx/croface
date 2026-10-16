@@ -1343,15 +1343,19 @@ body.menu-open .quick-actions { display: none; }
 .cv__body { container-type: inline-size; }
 .cv__body h2 { white-space: nowrap; font-size: min(clamp(1.5rem, 1.2rem + 1vw, 2.125rem), 6.4cqi); }
 
-/* v5 — risco à mão sob "mais plena", desenhado depois da escrita */
+/* v5 — risco à mão sob "mais plena", desenhado depois da escrita.
+   - escala uniforme (sem preserveAspectRatio="none" nem vector-effect): o Safari erra o
+     tracejado com pathLength nessas condições;
+   - começa em 1.05, não em 1: com dashoffset exato o traço tem comprimento zero no início
+     da linha e o arremate redondo aparece como um ponto antes da animação. */
 .hero__sign-text { position: relative; display: inline-block; }
 .hero__stroke {
-  position: absolute; left: 2%; right: 2%; bottom: -.04em; width: 96%; height: .22em;
+  position: absolute; left: 2%; bottom: -.1em; width: 96%; height: auto;
   overflow: visible; pointer-events: none;
 }
 .hero__stroke path {
-  fill: none; stroke: #2fa9cf; stroke-width: 4; stroke-linecap: round; vector-effect: non-scaling-stroke;
-  stroke-dasharray: 1; stroke-dashoffset: 1;
+  fill: none; stroke: #2fa9cf; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 1 2; stroke-dashoffset: 1.05;
   animation: stroke-draw .9s cubic-bezier(.65, 0, .35, 1) 2.2s forwards;
 }
 @keyframes stroke-draw { to { stroke-dashoffset: 0; } }
