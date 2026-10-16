@@ -34,6 +34,8 @@
 - [x] CRO do Dr. Wesley (CROSP 171404) e do Dr. Marcelo (CROSP 169331).
 - [ ] Equipe multidisciplinar: nome e CRO de quem atende endodontia, ortodontia e implantodontia.
 - [x] **Hero: "Sorrisos saudáveis para uma vida mais plena"**, com "mais plena" em letra de assinatura e um risco azul desenhado embaixo logo depois da escrita (sem animação para quem pede menos movimento);: fonte Allura (SIL OFL 1.1, 25 KB, hospedada em `assets/fonts/`, licença em `LICENSE-allura.txt`), em tamanho grande e reta, azul do logo, efeito de escrita da esquerda para a direita (desligado para quem pede menos movimento). O texto continua real dentro do H1.
+- [x] **Avaliação e exames (16/10, confirmado pelo cliente):** a avaliação dura **no mínimo 1 hora** (home, etapa 1; Como atendemos, introdução e FAQ). Exames complementares **não são feitos na clínica**: o texto agora diz que são solicitados e feitos em um centro de imagem (primeira consulta, Cirurgias e Implante). A imagem da etapa 3 ainda é placeholder.
+- [x] **Biossegurança sem fotos (16/10):** em Como atendemos, a galeria de 4 fotos (consultório, autoclave, instrumental embalado, EPI) virou 4 tópicos com subtítulo e explicação curta de como cada etapa funciona — conteúdo útil para o visitante e para busca. Fotos removidas.
 - [x] **Foto real da câmera intraoral (16/10):** dois dentistas examinando o paciente com a imagem ampliada no monitor; substituiu o placeholder na seção da câmera (home), na etapa 2 da primeira consulta e em Como atendemos (`camera-intraoral-uso`). **Pendente:** autorização de imagem do paciente.
 - [x] **Foto real da avaliação (16/10):** etapa 1 da primeira consulta ("Exame sem pressa", home e Como atendemos; arquivo `consulta-1-avaliacao`), só a parte de cima da foto (sem o monitor do logo em primeiro plano). Legenda sem nome da dentista. **Pendente:** autorização de imagem da paciente.
 - [x] **Foto real de profilaxia (16/10):** destaque no card da home, capa da página de Profilaxia (`prevencao-capa`, recorte quadrado), miniaturas e compartilhamento (`profilaxia-atendimento`/`profilaxia-atendimento-thumb`). **Pendente:** autorização de imagem do paciente (rosto parcialmente visível) e confirmar se quem atende é a Dra. Renata (está assim na legenda).
@@ -49,7 +51,7 @@
 - [x] Acessibilidade: no térreo, sem degraus na entrada, com banheiro adaptado (confirmado).
 - [ ] **Autorização de uso de imagem** dos pacientes que aparecem nas fotos (paciente com a Dra. Renata, paciente idosa com o Dr. Wesley e paciente idosa com o Dr. Marcelo).
 - [ ] Foto do hero da home: a atual é de banco de imagem. Substituir por foto real autorizada.
-- [ ] Fotos que ainda faltam: dentista conversando com paciente (etapa 1 da consulta), exames, diagnóstico, plano, autoclave, instrumental embalado, fachada, capas de implante e de cirurgias, e os 4 pares de antes e depois.
+- [ ] Fotos que ainda faltam: dentista conversando com paciente (etapa 1 da consulta), exames, diagnóstico, plano, fachada, capas de implante e de cirurgias, e os 4 pares de antes e depois.
 - [ ] Revisar a chamada emocional do hero (opções em SECOES-E-IMAGENS.md).
 
 ---

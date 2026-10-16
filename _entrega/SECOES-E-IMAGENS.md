@@ -142,7 +142,7 @@ Todas seguem a mesma sequência:
 | 1 | Primeira consulta *(foto fixa)* | 6 etapas detalhadas | `consulta-1` … `consulta-5` (reaproveitadas da home) |
 | 2 | O que levar e bom saber | Documentos, remédios, exames, próteses; sem jejum | — |
 | 3 | Para quem tem medo de dentista | O que garantimos na primeira consulta | — |
-| 4 | Biossegurança | Protocolo entre pacientes e 4 fotos | `seg-estrutura-consultorio`, `seg-esterilizacao-autoclave`, `seg-esterilizacao-embalagem`, `seg-equip-paramentacao` (reaproveitadas) |
+| 4 | Biossegurança | Protocolo entre pacientes e 4 tópicos explicados (limpeza e desinfecção, autoclave, instrumental embalado, EPI) | — (sem fotos, decisão de 16/10) |
 | 5 | Tratamento e acompanhamento | O que acontece depois do plano | — |
 | 6 | Perguntas frequentes | Agendamento, custo da avaliação, duração, estacionamento, horário | — |
 
@@ -173,17 +173,17 @@ Todas seguem a mesma sequência:
 | `predio-fachada` | Fachada da Rua Coronel Diogo, 484, vertical, com a identificação visível |
 | ~~`predio-conatus`~~ | **Retirada (16/10/2026):** os doutores acharam que a foto da Conatus podia confundir o público. Não usar foto da Conatus no site. |
 | `menu-recepcao` | Recepção/entrada, vertical |
-| `seg-estrutura-consultorio` | Consultório completo e organizado |
+| ~~`seg-estrutura-consultorio`~~ | Não é mais usada (biossegurança sem fotos). |
 | `seg-estrutura-recepcao` | Recepção e acesso (mostrar elevador/rampa, se houver) |
 | `local-entrada` | *Opcional/reserva:* entrada vista da calçada |
 
 **Biossegurança e equipamento (só mãos e objetos)**
 | Arquivo | O que mostrar |
 |---|---|
-| `seg-esterilizacao-autoclave` | Autoclave em uso |
-| `seg-esterilizacao-embalagem` | Instrumental embalado e selado |
+| ~~`seg-esterilizacao-autoclave`~~ | Não é mais usada (biossegurança sem fotos). |
+| ~~`seg-esterilizacao-embalagem`~~ | Não é mais usada (biossegurança sem fotos). |
 | `seg-equip-camera` | A câmera intraoral |
-| `seg-equip-paramentacao` | Profissional paramentado (luvas, máscara, gorro, protetor facial) |
+| ~~`seg-equip-paramentacao`~~ | Não é mais usada (biossegurança sem fotos). |
 | `implante-2-cirurgia` | Kit de implante e sala organizados |
 | `cirurgia-procedimento` | Sala cirúrgica montada, instrumental estéril |
 | `protese-1-moldagem` | Materiais de moldagem |
