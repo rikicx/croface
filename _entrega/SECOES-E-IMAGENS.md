@@ -57,7 +57,7 @@ Cada página de tratamento mira **uma** busca ("implante dentário Vila Mariana"
 | — | **Hero** (tela cheia, centralizado) | Promessa principal, **um** botão (WhatsApp) + link "Como é a primeira consulta", responsável técnica. Fica **preso** ao rolar: o conteúdo sobe por cima, o texto some e a foto escurece | `hero-atendimento` (e a versão `-960`) |
 | — | **Barra de seções** (vidro leitoso) | Sobre a base do hero, meio transparente; ao grudar no topo fica opaca e mostra o botão "WhatsApp" | — |
 | 1 | **Qual é a sua queixa?** | **Explorador**: 8 sintomas à esquerda, detalhe à direita (troca ao clicar), com link para a página certa | — (ícones) |
-| 2 | **Odontologia dentro de um centro de longevidade** | Foto fixa com o texto rolando à esquerda; a foto troca no meio | `predio-fachada` → `predio-conatus` |
+| 2 | **Odontologia dentro de um centro de longevidade** | Foto fixa com o texto rolando à esquerda; a foto troca no meio | `longevidade-consultorio` (etapas 1 e 2) → `avaliacao-exame` |
 | 3 | **Como é a primeira consulta** | **Rolagem horizontal presa** (desktop): a seção fica fixa e as 5 etapas passam para o lado conforme a página rola. No celular: toque nas etapas ou deslize | `consulta-1-exame` … `consulta-5-plano` |
 | 4 | **O que tratamos** | **Carrossel arrastável** com 6 cards (5 tratamentos + Como atendemos) | Capas das páginas: `implante-hero`, `protese-hero`, `cirurgia-hero`, `prevencao-hero`, `idosos-hero`, `atendimento-hero` (reaproveitadas) |
 | 5 | **Segurança e esterilização** | Galeria com abas: Estrutura / Esterilização / Equipamento | 6 fotos `seg-*` |
@@ -128,7 +128,7 @@ Todas seguem a mesma sequência:
 | # | Seção | Conteúdo | Foto |
 |---|---|---|---|
 | — | Capa | Odontologia para autonomia, no mesmo prédio da Conatus | `idosos-hero` — paciente 60+ conversando com o dentista, com familiar ao lado |
-| 1 | A boca no começo da cadeia *(foto fixa, fundo escuro)* | Sarcopenia, a cadeia até a autonomia, clínica e Conatus lado a lado | `predio-fachada` → `predio-conatus` (reaproveitadas) |
+| 1 | A boca no começo da cadeia *(foto fixa, fundo escuro)* | Sarcopenia, a cadeia até a autonomia, clínica e Conatus lado a lado | `longevidade-consultorio`, foto única (reaproveitadas) |
 | 2 | Sinais na mastigação | 8 sinais observáveis e para onde levar | — |
 | 3 | O que é diferente aqui | Sem pressa, você decide, remédios, câmera, acompanhante, acesso | — |
 | 4 | Para filhos e familiares | Como abrir a conversa sem tirar a autonomia, e botão de enviar a página | — |
@@ -171,7 +171,7 @@ Todas seguem a mesma sequência:
 | Arquivo | O que mostrar |
 |---|---|
 | `predio-fachada` | Fachada da Rua Coronel Diogo, 484, vertical, com a identificação visível |
-| `predio-conatus` | Área de musculação/pilates da Conatus (com autorização deles) |
+| ~~`predio-conatus`~~ | **Retirada (16/10/2026):** os doutores acharam que a foto da Conatus podia confundir o público. Não usar foto da Conatus no site. |
 | `menu-recepcao` | Recepção/entrada, vertical |
 | `seg-estrutura-consultorio` | Consultório completo e organizado |
 | `seg-estrutura-recepcao` | Recepção e acesso (mostrar elevador/rampa, se houver) |

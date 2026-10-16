@@ -34,6 +34,10 @@
 - [x] CRO do Dr. Wesley (CROSP 171404) e do Dr. Marcelo (CROSP 169331).
 - [ ] Equipe multidisciplinar: nome e CRO de quem atende endodontia, ortodontia e implantodontia.
 - [x] **Hero: "Sorrisos saudáveis para uma vida mais plena"**, com "mais plena" em letra de assinatura e um risco azul desenhado embaixo logo depois da escrita (sem animação para quem pede menos movimento);: fonte Allura (SIL OFL 1.1, 25 KB, hospedada em `assets/fonts/`, licença em `LICENSE-allura.txt`), em tamanho grande e reta, azul do logo, efeito de escrita da esquerda para a direita (desligado para quem pede menos movimento). O texto continua real dentro do H1.
+- [x] **Foto real da avaliação (16/10):** etapa 1 da primeira consulta ("Exame sem pressa", home e Como atendemos; arquivo `consulta-1-avaliacao`), só a parte de cima da foto (sem o monitor do logo em primeiro plano). Legenda sem nome da dentista. **Pendente:** autorização de imagem da paciente.
+- [x] **Foto real de profilaxia (16/10):** destaque no card da home, capa da página de Profilaxia (`prevencao-capa`, recorte quadrado), miniaturas e compartilhamento (`prevencao-hero`/`prevencao-thumb`). **Pendente:** autorização de imagem do paciente (rosto parcialmente visível) e confirmar se quem atende é a Dra. Renata (está assim na legenda).
+- [x] **Fotos reais de cirurgia (16/10):** a foto da equipe operando (Dr. Wesley e Dr. Marcelo) virou destaque: card "Cirurgias" da home, capa da página de Cirurgias (`cirurgia-capa`, recorte quadrado), miniaturas e imagem de compartilhamento (`cirurgia-hero`/`cirurgia-thumb`). A foto com o monitor do implante entrou na etapa "O dia do procedimento" (`cirurgia-2-sala`). **Pendente:** autorização de imagem do paciente (coberto pelo campo, não identificável) e da auxiliar ao fundo.
+- [x] **Foto da Conatus retirada** (16/10, decisão dos doutores: podia confundir o público). Na seção de longevidade da home e na página de idosos, a etapa "A cadeia" não tem foto própria: mantém a da Dra. Renata no consultório (a foto da prótese foi testada e descartada, porque "jogava contra"). O texto sobre o mesmo prédio continua.
 - [x] **Home sem [CONFIRMAR]:** retirados o aviso da equipe multidisciplinar (nomes/CRO continuam pendentes), o ponto de referência na rua, o aviso de especialidade do Dr. Marcelo e os campos vazios do Dr. Wesley. As coordenadas `geo` (que estavam como texto de placeholder e invalidavam os dados estruturados) foram removidas de todas as páginas até termos latitude/longitude reais.
 - [x] **Curadoria de imagens (14/10):** trocadas 4 fotos de banco genéricas (idosos posando em fundo liso, sem relação com a clínica) e 3 placeholders por recortes de fotos reais da CROFACE: `consulta-4-diagnostico` (Dr. Marcelo no consultório, logo no monitor), `consulta-5-plano` e `prevencao-3-orientacao` (Dra. Renata em atendimento), `cirurgia-3-pos` (Dr. Wesley no consultório), `cirurgia-2-sala` e `implante-2-cirurgia` (consultório), `implante-1-avaliacao` (Dr. Marcelo em atendimento). Legendas (alt) reescritas para descrever o que aparece de fato.
 - [x] **Logo oficial** (CorelDRAW, 10/11/2025) aplicado: versão horizontal no cabeçalho (`logo-croface-h.svg`, montada a partir das peças do logo: símbolo à esquerda, nome à direita), versão vertical original no rodapé e na 404 (`logo-croface.svg`), símbolo no favicon/ícone do celular e PNG 600×600 para o Google (`logo-croface.png`). **Confirmar com a clínica se a versão horizontal pode ser usada.** O logo diz "Odontologia"; o site mantém o nome "CROFACE — Centro de Reabilitação Orofacial" no texto.
@@ -44,7 +48,7 @@
 - [x] Acessibilidade: no térreo, sem degraus na entrada, com banheiro adaptado (confirmado).
 - [ ] **Autorização de uso de imagem** dos pacientes que aparecem nas fotos (paciente com a Dra. Renata, paciente idosa com o Dr. Wesley e paciente idosa com o Dr. Marcelo).
 - [ ] Foto do hero da home: a atual é de banco de imagem. Substituir por foto real autorizada.
-- [ ] Fotos que ainda faltam: **câmera intraoral com a imagem na tela** (prioridade, porque é o diferencial), dentista conversando com paciente (etapa 1 da consulta), exames, diagnóstico, plano, autoclave, instrumental embalado, fachada, Conatus, capas de implante e de cirurgias, e os 4 pares de antes e depois.
+- [ ] Fotos que ainda faltam: **câmera intraoral com a imagem na tela** (prioridade, porque é o diferencial), dentista conversando com paciente (etapa 1 da consulta), exames, diagnóstico, plano, autoclave, instrumental embalado, fachada, capas de implante e de cirurgias, e os 4 pares de antes e depois.
 - [ ] Revisar a chamada emocional do hero (opções em SECOES-E-IMAGENS.md).
 
 ---
@@ -67,6 +71,8 @@ assets/icons.svg         ícones (um arquivo, em cache para todas as páginas)
 assets/fonts/            Inter Tight auto-hospedada (54 KB)
 assets/img/              placeholders "FOTO A CAPTAR" — trocar mantendo o nome
 ```
+
+> **Ao trocar uma foto já publicada, use um nome de arquivo novo.** O servidor manda o navegador guardar imagens por 1 ano (`.htaccess`); com o mesmo nome, quem já visitou o site continua vendo a foto antiga.
 
 **Como editar sem instalar nada:** cada página é um `index.html` dentro da sua pasta. Header e rodapé se repetem em todas: para mudar telefone, horário ou CRO, use "Localizar e substituir em todos os arquivos" do editor (buscar `964480760`, `HORARIO`, `CRO`). Ao editar `site.css` ou `site.js`, aumente o número de `?v=5` (ex.: `?v=6`) em todas as páginas.
 
