@@ -1,6 +1,6 @@
 # CROFACE — Seções e imagens do site
 
-> **Atualizado em 13/10/2026 (v4).** A home e as páginas mudaram; veja o resumo em ENTREGA.md. Fotos reais já aplicadas: `equipe-*` (retratos e consultório), `menu-recepcao`, `atendimento-hero`, `idosos-hero`, `idosos-atendimento`, `prevencao-hero`, `clinica-hero`, `protese-hero`, `protese-1/2/3`, `prevencao-1/2`, `longevidade-consultorio` (Dra. Renata no consultório; substituiu a selfie), `avaliacao-exame`, `consulta-1-exame`, `seg-estrutura-consultorio`, `seg-equip-paramentacao`. Novas fotos a captar: `camera-intraoral` (prioridade) e os pares `antes-*` / `depois-*` (implante, protese, clinica, prevencao), com autorização por escrito do paciente.
+> **Atualizado em 13/10/2026 (v4).** A home e as páginas mudaram; veja o resumo em ENTREGA.md. Fotos reais já aplicadas: `equipe-*` (retratos e consultório), `menu-recepcao`, `atendimento-hero`, `idosos-hero`, `idosos-atendimento`, `profilaxia-atendimento`, `clinica-hero`, `protese-hero`, `protese-1/2/3`, `prevencao-1/2`, `longevidade-consultorio` (Dra. Renata no consultório; substituiu a selfie), `avaliacao-exame`, `consulta-1-exame`, `seg-estrutura-consultorio`, `seg-equip-paramentacao`. Novas fotos a captar: `camera-intraoral` (prioridade) e os pares `antes-*` / `depois-*` (implante, protese, clinica, prevencao), com autorização por escrito do paciente.
 >
 > **Opções de chamada emocional para o hero** (no ar hoje: a primeira):
 > 1. Sorrisos saudáveis para uma vida mais plena. (em uso; definido pelo cliente em 16/10/2026)
@@ -57,9 +57,9 @@ Cada página de tratamento mira **uma** busca ("implante dentário Vila Mariana"
 | — | **Hero** (tela cheia, centralizado) | Promessa principal, **um** botão (WhatsApp) + link "Como é a primeira consulta", responsável técnica. Fica **preso** ao rolar: o conteúdo sobe por cima, o texto some e a foto escurece | `hero-atendimento` (e a versão `-960`) |
 | — | **Barra de seções** (vidro leitoso) | Sobre a base do hero, meio transparente; ao grudar no topo fica opaca e mostra o botão "WhatsApp" | — |
 | 1 | **Qual é a sua queixa?** | **Explorador**: 8 sintomas à esquerda, detalhe à direita (troca ao clicar), com link para a página certa | — (ícones) |
-| 2 | **Odontologia dentro de um centro de longevidade** | Foto fixa com o texto rolando à esquerda; a foto troca no meio | `longevidade-consultorio` (etapas 1 e 2) → `avaliacao-exame` |
+| 2 | **Odontologia dentro de um centro de longevidade** | Foto fixa com o texto rolando à esquerda; a foto troca no meio | `longevidade-consultorio` (etapas 1 e 2) → `avaliacao-exame-sem-pressa` (mesma foto do "Exame sem pressa") |
 | 3 | **Como é a primeira consulta** | **Rolagem horizontal presa** (desktop): a seção fica fixa e as 5 etapas passam para o lado conforme a página rola. No celular: toque nas etapas ou deslize | `consulta-1-exame` … `consulta-5-plano` |
-| 4 | **O que tratamos** | **Carrossel arrastável** com 6 cards (5 tratamentos + Como atendemos) | Capas das páginas: `implante-hero`, `protese-hero`, `cirurgia-hero`, `prevencao-hero`, `idosos-hero`, `atendimento-hero` (reaproveitadas) |
+| 4 | **O que tratamos** | **Carrossel arrastável** com 6 cards (5 tratamentos + Como atendemos) | Capas das páginas: `implante-hero`, `protese-hero`, `cirurgia-equipe`, `profilaxia-atendimento`, `idosos-hero`, `atendimento-hero` (reaproveitadas) |
 | 5 | **Segurança e esterilização** | Galeria com abas: Estrutura / Esterilização / Equipamento | 6 fotos `seg-*` |
 | 6 | **Quem atende você** | 3 sócios com nome, função e CRO; o card abre o WhatsApp | `equipe-wesley`, `equipe-renata`, `equipe-marcelo` |
 | 7 | **Para quem cuida de alguém** | Sinais do dia a dia e botão "Enviar esta página" | `cuidador-familia` |
@@ -104,11 +104,11 @@ Todas seguem a mesma sequência:
 
 | # | Seção | Conteúdo | Foto |
 |---|---|---|---|
-| — | Capa | Responsável identificado com CRO | `cirurgia-hero` — Dr. Wesley em conversa de planejamento |
+| — | Capa | Responsável identificado com CRO | `cirurgia-equipe` — Dr. Wesley em conversa de planejamento |
 | 1 | O que é | A área e o que é feito no consultório | `equipe-wesley` (reaproveitada, em miniatura) |
 | 2 | Procedimentos | Extrações/sisos, enxertos, pré-protéticas, implantes, lesões/biópsias, ATM (**lista a confirmar**) | — |
 | 3 | Dor na mandíbula | Sinais, causas, tratamento conservador primeiro | — |
-| 4 | Como é uma cirurgia *(foto fixa)* | Avaliação → preparo → o dia → pós-operatório → retorno | `cirurgia-1-avaliacao` (tomografia/panorâmica na tela) · `cirurgia-2-sala` (sala montada, instrumental estéril) · `cirurgia-3-pos` (orientações de pós entregues ao paciente) |
+| 4 | Como é uma cirurgia *(foto fixa)* | Avaliação → preparo → o dia → pós-operatório → retorno | `cirurgia-1-avaliacao` (tomografia/panorâmica na tela) · `cirurgia-procedimento` (sala montada, instrumental estéril) · `cirurgia-3-pos` (orientações de pós entregues ao paciente) |
 | 5 | Se você toma remédios | Anticoagulantes, osteoporose, pressão, diabetes; nunca suspender por conta própria | — |
 | 6 | Perguntas frequentes | Dor, acompanhante, recuperação, siso, idade, custo, convênio | — |
 
@@ -116,7 +116,7 @@ Todas seguem a mesma sequência:
 
 | # | Seção | Conteúdo | Foto |
 |---|---|---|---|
-| — | Capa | Prevenir para manter a mastigação | `prevencao-hero` — limpeza profissional em plano aberto |
+| — | Capa | Prevenir para manter a mastigação | `profilaxia-atendimento` — limpeza profissional em plano aberto |
 | 1 | Por que muda depois dos 50 | Gengiva que retrai, boca seca, restaurações antigas, doença da gengiva | — |
 | 2 | O que cada sinal pode indicar | Blocos: gengiva que sangra, sensibilidade, dente quebrado, dente escurecido (destinos dos cartões de queixa) | — |
 | 3 | Consulta de manutenção *(foto fixa)* | Saúde → exame → limpeza → orientação → retorno | `prevencao-1-exame` (exame da gengiva com sonda) · `prevencao-2-limpeza` (limpeza em andamento) · `prevencao-3-orientacao` (orientação com escovas interdentais) |
@@ -185,7 +185,7 @@ Todas seguem a mesma sequência:
 | `seg-equip-camera` | A câmera intraoral |
 | `seg-equip-paramentacao` | Profissional paramentado (luvas, máscara, gorro, protetor facial) |
 | `implante-2-cirurgia` | Kit de implante e sala organizados |
-| `cirurgia-2-sala` | Sala cirúrgica montada, instrumental estéril |
+| `cirurgia-procedimento` | Sala cirúrgica montada, instrumental estéril |
 | `protese-1-moldagem` | Materiais de moldagem |
 | `protese-2-prova` | Escala de cores de dentes |
 | `protese-3-ajuste` | Ajuste fino de prótese na bancada |
@@ -210,7 +210,7 @@ Todas seguem a mesma sequência:
 | `consulta-1-exame` | Exame com calma, dentista sentado |
 | `prevencao-1-exame` | Exame da gengiva |
 | `prevencao-2-limpeza` | Limpeza em andamento, plano aberto |
-| `prevencao-hero` | Limpeza profissional, plano aberto (variação da anterior) |
+| `profilaxia-atendimento` | Limpeza profissional, plano aberto (variação da anterior) |
 | `implante-hero` | Dentista mostrando modelo de implante ao paciente |
 | `protese-hero` | Prótese nas mãos do dentista, em conversa |
 | `idosos-hero` | Paciente 60+ com o dentista e um familiar ao lado |
@@ -223,13 +223,13 @@ Todas seguem a mesma sequência:
 | `equipe-wesley` | Dr. Wesley. Terço inferior esquerdo livre (a etiqueta com nome cobre essa área) |
 | `equipe-renata` | Dra. Renata, idem |
 | `equipe-marcelo` | Dr. Marcelo, idem |
-| `cirurgia-hero` | Dr. Wesley em conversa de planejamento (pode ser na mesma sessão dos retratos) |
+| `cirurgia-equipe` | Dr. Wesley em conversa de planejamento (pode ser na mesma sessão dos retratos) |
 
 **Montagem (não é captação)**
 | Arquivo | O que é |
 |---|---|
 | `og-croface` | Foto da clínica com o nome CROFACE legível. É a imagem que aparece quando o link é enviado no WhatsApp |
-| `*-thumb` (5) | Redução automática das capas `implante-hero`, `protese-hero`, `cirurgia-hero`, `prevencao-hero`, `idosos-hero` |
+| `*-thumb` (5) | Redução automática das capas `implante-hero`, `protese-hero`, `cirurgia-equipe`, `profilaxia-atendimento`, `idosos-hero` |
 | `hero-atendimento-960` | Redução do hero da home |
 
 Também falta o **logo oficial em SVG**.
