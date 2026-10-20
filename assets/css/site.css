@@ -580,7 +580,7 @@ body.menu-open { overflow: hidden; }
   min-height: 100vh; min-height: 100svh;
   color: var(--on-dark); background: var(--navy-950); text-align: center;
 }
-.hero__media { position: absolute; inset: 0; z-index: -2; animation: hero-zoom 2.8s var(--ease) both; }
+.hero__media { position: absolute; inset: 0; z-index: -2; animation: hero-zoom 2.8s var(--ease) var(--intro-d, 0s) both; }
 .hero__media img { width: 100%; height: 100%; object-fit: cover; will-change: transform; }
 /* Escurece a foto conforme o conteúdo cobre o hero (--cover vai de 0 a 1 via JS) */
 .hero__media::after { content: ""; position: absolute; inset: 0; background: var(--navy-950); opacity: calc(var(--cover, 0) * .75); }
@@ -938,16 +938,16 @@ body.menu-open { overflow: hidden; }
 /* Entrada ao carregar: header, hero da home e capas das páginas internas */
 /* A animação atua nos blocos internos e não deixa transform residual: um transform no
    .site-header prenderia o menu em tela cheia (position: fixed) dentro do header. */
-.brand, .header-center, .menu-toggle { animation: drop 1s var(--ease) backwards; }
-.hero__content > *, .page-hero__text > * { animation: rise 1.2s var(--ease) both; }
-.hero__content > :nth-child(1), .page-hero__text > :nth-child(1) { animation-delay: .25s; }
-.hero__content > :nth-child(2), .page-hero__text > :nth-child(2) { animation-delay: .4s; }
-.hero__content > :nth-child(3), .page-hero__text > :nth-child(3) { animation-delay: .55s; }
-.hero__content > :nth-child(4), .page-hero__text > :nth-child(4) { animation-delay: .7s; }
-.hero__content > :nth-child(5), .page-hero__text > :nth-child(5) { animation-delay: .85s; }
+.brand, .header-center, .menu-toggle { animation: drop 1s var(--ease) var(--intro-d, 0s) backwards; }
+.hero__content > *, .page-hero__text > * { animation: rise 1.2s var(--ease) var(--intro-d, 0s) both; }
+.hero__content > :nth-child(1), .page-hero__text > :nth-child(1) { animation-delay: calc(.25s + var(--intro-d, 0s)); }
+.hero__content > :nth-child(2), .page-hero__text > :nth-child(2) { animation-delay: calc(.4s + var(--intro-d, 0s)); }
+.hero__content > :nth-child(3), .page-hero__text > :nth-child(3) { animation-delay: calc(.55s + var(--intro-d, 0s)); }
+.hero__content > :nth-child(4), .page-hero__text > :nth-child(4) { animation-delay: calc(.7s + var(--intro-d, 0s)); }
+.hero__content > :nth-child(5), .page-hero__text > :nth-child(5) { animation-delay: calc(.85s + var(--intro-d, 0s)); }
 .page-hero__text > :nth-child(6) { animation-delay: 1s; }
 .page-hero__media { animation: wipe-left 1.5s var(--ease) .15s both; }
-.page-hero__media img { animation: hero-zoom 2.4s var(--ease) .15s both; }
+.page-hero__media img { animation: hero-zoom 2.4s var(--ease) calc(.15s + var(--intro-d, 0s)) both; }
 
 /* Revelação ao rolar. O JS só marca o que está abaixo da dobra; sem JS, tudo aparece. */
 .reveal-pending { opacity: 0; transform: translateY(48px); }
@@ -1308,7 +1308,7 @@ body.menu-open .quick-actions { display: none; }
   color: #053d75;
   padding: 0 .2em .1em; /* evita corte das hastes da caligrafia */
   clip-path: inset(-.4em -.2em -.4em -.2em);
-  animation: sign-write 1.8s cubic-bezier(.6, .05, .3, 1) .5s both;
+  animation: sign-write 1.8s cubic-bezier(.6, .05, .3, 1) calc(.5s + var(--intro-d, 0s)) both;
 }
 @keyframes sign-write {
   from { clip-path: inset(-.4em 100% -.4em -.2em); }
@@ -1356,7 +1356,7 @@ body.menu-open .quick-actions { display: none; }
 .hero__stroke path {
   fill: none; stroke: #2fa9cf; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round;
   stroke-dasharray: 1 2; stroke-dashoffset: 1.05;
-  animation: stroke-draw .9s cubic-bezier(.65, 0, .35, 1) 2.2s forwards;
+  animation: stroke-draw .9s cubic-bezier(.65, 0, .35, 1) calc(2.2s + var(--intro-d, 0s)) forwards;
 }
 @keyframes stroke-draw { to { stroke-dashoffset: 0; } }
 @media (prefers-reduced-motion: reduce) { .hero__stroke path { animation: none; stroke-dashoffset: 0; } }
@@ -1396,3 +1396,47 @@ body.menu-open .quick-actions { display: none; }
 /* Etiqueta do estado que domina a imagem fica em destaque */
 .ba__label { transition: opacity .25s var(--ease); }
 .ba.is-depois .ba__label--before, .ba:not(.is-depois) .ba__label--after { opacity: .5; }
+
+
+/* ---------- Abertura: o logo se desenha (só na primeira página da visita; ver assets/js/intro.js) ----------
+   Sem JS, ou com "reduzir movimento", não aparece. Some sozinho só com CSS, sem depender do site.js. */
+.intro-loader { display: none; }
+.intro { --intro-d: 1.7s; } /* as entradas do topo esperam a abertura terminar */
+.intro .intro-loader {
+  position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center;
+  background: #fff; pointer-events: none;
+  animation: intro-out .5s cubic-bezier(.65, 0, .35, 1) 1.7s forwards;
+}
+.intro-loader svg { width: min(50vw, 220px); height: auto; overflow: visible; }
+.intro-loader path {
+  fill-opacity: 0; stroke-width: 130; stroke-linejoin: round; stroke-linecap: round;
+  stroke-dasharray: 1; stroke-dashoffset: 1;
+  animation: intro-draw .9s cubic-bezier(.65, 0, .35, 1) forwards, intro-fill .45s ease 1s forwards;
+}
+.intro-loader .lg-tooth { fill: #666; stroke: #666; }
+.intro-loader .lg-face { fill: #053d75; stroke: #053d75; animation-delay: .15s, 1.05s; }
+.intro-loader .lg-arc { fill: #999; stroke: #999; animation-delay: .35s, 1.05s; }
+.intro-loader .lg-word { fill: #656565; stroke: #656565; stroke-width: 80; animation-duration: .6s, .4s; }
+.intro-loader .lg-sub { fill: #999; stroke: #999; stroke-width: 55; animation-duration: .5s, .4s; }
+.intro-loader .lg-word:nth-of-type(4) { animation-delay: 0.55s, 1.10s; }
+.intro-loader .lg-word:nth-of-type(5) { animation-delay: 0.61s, 1.12s; }
+.intro-loader .lg-word:nth-of-type(6) { animation-delay: 0.67s, 1.14s; }
+.intro-loader .lg-word:nth-of-type(7) { animation-delay: 0.73s, 1.16s; }
+.intro-loader .lg-word:nth-of-type(8) { animation-delay: 0.79s, 1.18s; }
+.intro-loader .lg-word:nth-of-type(9) { animation-delay: 0.85s, 1.20s; }
+.intro-loader .lg-word:nth-of-type(10) { animation-delay: 0.91s, 1.22s; }
+.intro-loader .lg-sub:nth-of-type(11) { animation-delay: 0.80s, 1.20s; }
+.intro-loader .lg-sub:nth-of-type(12) { animation-delay: 0.83s, 1.21s; }
+.intro-loader .lg-sub:nth-of-type(13) { animation-delay: 0.86s, 1.22s; }
+.intro-loader .lg-sub:nth-of-type(14) { animation-delay: 0.89s, 1.23s; }
+.intro-loader .lg-sub:nth-of-type(15) { animation-delay: 0.92s, 1.24s; }
+.intro-loader .lg-sub:nth-of-type(16) { animation-delay: 0.95s, 1.25s; }
+.intro-loader .lg-sub:nth-of-type(17) { animation-delay: 0.98s, 1.26s; }
+.intro-loader .lg-sub:nth-of-type(18) { animation-delay: 1.01s, 1.27s; }
+.intro-loader .lg-sub:nth-of-type(19) { animation-delay: 1.04s, 1.28s; }
+.intro-loader .lg-sub:nth-of-type(20) { animation-delay: 1.07s, 1.29s; }
+.intro-loader .lg-sub:nth-of-type(21) { animation-delay: 1.10s, 1.30s; }
+@keyframes intro-draw { to { stroke-dashoffset: 0; } }
+@keyframes intro-fill { to { fill-opacity: 1; stroke-opacity: 0; } }
+@keyframes intro-out { to { opacity: 0; visibility: hidden; } }
+@media (prefers-reduced-motion: reduce) { .intro .intro-loader { display: none; } .intro { --intro-d: 0s; } }

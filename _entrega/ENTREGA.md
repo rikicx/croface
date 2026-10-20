@@ -58,6 +58,8 @@
   - `consulta-3-exames-ia-v3`: etapa 3 da primeira consulta (home e Como atendemos; no quadro fixo de Como atendemos a imagem aparece inteira, com `contain`, para não cortar o monitor). Legenda "Esclarecimento de dúvidas sobre exames odontológicos. Imagem ilustrativa."
   - `cirurgia-1-avaliacao-ia-v3`: etapa 1 de Cirurgias. Legenda "Conversa sobre as etapas do tratamento odontológico. Imagem ilustrativa."
   - Pessoas e ambientes fictícios: não representam pacientes, profissionais nem a estrutura da CROFACE. As fotos reais continuam onde estavam. Arquivos antigos preservados em `assets/img/`.
+- [x] **Abertura com o logo (20/10):** na primeira página de cada visita, o logo se desenha (contorno, depois preenchimento) e some em cerca de 2 s; as animações do topo esperam. Não aparece em visitas seguintes na mesma sessão, para robôs de busca nem com "reduzir movimento". Some só com CSS, mesmo se o JS falhar (`assets/js/intro.js` marca o `<html>`; o desenho fica em `site.css`).
+- [x] **Capa de Prótese (20/10):** novo recorte da foto do Dr. Marcelo, mais baixo, mostrando as mãos e a prótese (`protese-capa` e `protese-capa-thumb`, no lugar de `protese-hero`/`protese-thumb`; vale também para a capa da página e a imagem de compartilhamento).
 - [ ] Fotos reais que ainda faltam: fachada e capas de implante e de cirurgias. Exames e os 4 pares de antes e depois estão com imagens ilustrativas (acima); trocar por casos reais só com autorização por escrito do paciente.
 - [ ] Revisar a chamada emocional do hero (opções em SECOES-E-IMAGENS.md).
 
