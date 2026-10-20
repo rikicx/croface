@@ -7,3 +7,9 @@
 
 # Material de trabalho (fotos brutas otimizadas; não faz parte do site)
 _fotos-web/
+
+# Imagens geradas: originais PNG pesados e versão v1 não usada no site (ficam só no computador)
+_entrega/imagens-ia/**/originais/
+_entrega/imagens-ia/originais/
+assets/img/ia/*.jpg
+assets/img/ia/*.webp

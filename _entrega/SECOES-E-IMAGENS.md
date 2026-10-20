@@ -57,7 +57,7 @@ Cada página de tratamento mira **uma** busca ("implante dentário Vila Mariana"
 | — | **Hero** (tela cheia, centralizado) | Promessa principal, **um** botão (WhatsApp) + link "Como é a primeira consulta", responsável técnica. Fica **preso** ao rolar: o conteúdo sobe por cima, o texto some e a foto escurece | `hero-atendimento` (e a versão `-960`) |
 | — | **Barra de seções** (vidro leitoso) | Sobre a base do hero, meio transparente; ao grudar no topo fica opaca e mostra o botão "WhatsApp" | — |
 | 1 | **Qual é a sua queixa?** | **Explorador**: 8 sintomas à esquerda, detalhe à direita (troca ao clicar), com link para a página certa | — (ícones) |
-| 2 | **Odontologia dentro de um centro de longevidade** | Foto fixa com o texto rolando à esquerda; a foto troca no meio | `longevidade-consultorio` (etapas 1 e 2) → `avaliacao-exame-sem-pressa` (mesma foto do "Exame sem pressa") |
+| 2 | **Odontologia dentro de um centro de longevidade** | Foto fixa com o texto rolando à esquerda; a foto troca no meio | `longevidade-consultorio` (etapas 1 e 2) → `consulta-1-avaliacao` (foto horizontal inteira, enquadrada na dentista) |
 | 3 | **Como é a primeira consulta** | **Rolagem horizontal presa** (desktop): a seção fica fixa e as 5 etapas passam para o lado conforme a página rola. No celular: toque nas etapas ou deslize | `consulta-1-exame` … `consulta-5-plano` |
 | 4 | **O que tratamos** | **Carrossel arrastável** com 6 cards (5 tratamentos + Como atendemos) | Capas das páginas: `implante-hero`, `protese-hero`, `cirurgia-equipe`, `profilaxia-atendimento`, `idosos-hero`, `atendimento-hero` (reaproveitadas) |
 | 5 | **Segurança e esterilização** | Galeria com abas: Estrutura / Esterilização / Equipamento | 6 fotos `seg-*` |
@@ -195,9 +195,9 @@ Todas seguem a mesma sequência:
 | Arquivo | O que mostrar |
 |---|---|
 | `consulta-2-camera` | Imagem da câmera intraoral no monitor (sem identificar o paciente) |
-| `consulta-3-exames` | Dentista analisando radiografia/tomografia na tela |
+| `consulta-3-exames` | **Aplicada a ilustração `ia/v3/consulta-3-exames-ia-v3` (20/10, fictícia).** Pode ser trocada por foto real. |
 | `implante-1-avaliacao` | Tomografia na tela, dentista e paciente olhando juntos |
-| `cirurgia-1-avaliacao` | Tomografia/panorâmica sendo analisada |
+| `cirurgia-1-avaliacao` | **Aplicada a ilustração `ia/v3/cirurgia-1-avaliacao-ia-v3` (20/10, fictícia).** Pode ser trocada por foto real. |
 | `consulta-4-diagnostico` | Dentista **sentado ao lado** do paciente, explicando |
 | `consulta-5-plano` | Plano apresentado (papel ou tela), sem valores |
 | `cirurgia-3-pos` | Orientações de pós-operatório sendo entregues |

@@ -1173,7 +1173,7 @@ body.menu-open .quick-actions { display: none; }
 .ba-wrap { max-width: 60rem; }
 .ba { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--surface-3); user-select: none; -webkit-user-select: none; touch-action: pan-y; --pos: 50%; }
 .ba picture, .ba img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.ba__before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.ba__before { clip-path: inset(0 0 0 var(--pos)); } /* o controle mostra o estado do lado para onde é puxado: perto de ANTES, antes; perto de DEPOIS, depois */
 .ba__label { position: absolute; top: 1rem; z-index: 2; padding: .375rem .75rem; border-radius: 999px; background: rgba(255,255,255,.88); color: var(--ink); font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; pointer-events: none; }
 .ba__label--before { left: 1rem; }
 .ba__label--after { right: 1rem; }
@@ -1363,7 +1363,7 @@ body.menu-open .quick-actions { display: none; }
 
 /* v5 — lista de cursos no resumo profissional (ano | curso + instituição) */
 .cv__courses { list-style: none; margin: .5rem 0 0; padding: 0; display: grid; gap: .875rem; }
-.cv__courses li { display: grid; grid-template-columns: 3.25rem minmax(0, 1fr); gap: .75rem; align-items: baseline; }
+.cv__courses li { display: grid; grid-template-columns: 4rem minmax(0, 1fr); gap: .75rem; align-items: baseline; }
 .cv__year { font-size: .875rem; font-weight: 700; color: var(--accent-ink); font-variant-numeric: tabular-nums; }
 .cv__course { line-height: 1.4; }
 .cv__course small { display: block; margin-top: .125rem; font-size: .875rem; color: var(--ink-2); }
@@ -1379,3 +1379,20 @@ body.menu-open .quick-actions { display: none; }
 .bio-card .icon { width: 1.75rem; height: 1.75rem; color: var(--accent-ink); margin-bottom: 1rem; }
 .bio-card h3 { font-size: 1.25rem; margin-bottom: .5rem; }
 .bio-card p { margin: 0; color: var(--ink-2); }
+
+/* Foto da avaliação no frame do scrolly: foto horizontal inteira, enquadrada na dentista, puxada para cima para não cortar a luminária */
+.scrolly__img--avaliacao img { object-position: 68% 30%; }
+
+/* Comparadores de sorriso: enquadramento 2:1 sem cortar as extremidades da boca; controle perto da base para não cobrir os dentes */
+.ba--sorriso { aspect-ratio: 2 / 1; }
+.ba--sorriso img { object-position: center; }
+.ba--sorriso .ba__knob { top: calc(100% - 2rem); }
+
+/* Legenda sobre a imagem (cenas ilustrativas de avaliação) */
+.stepper__media, .scrolly__inline { position: relative; }
+.img-note { position: absolute; left: .75rem; bottom: .75rem; z-index: 1; max-width: calc(100% - 1.5rem); padding: .3rem .6rem; border-radius: 4px; background: rgba(10,18,32,.62); color: #fff; font-size: .75rem; line-height: 1.4; pointer-events: none; }
+/* Cena de exames no frame vertical: imagem inteira (a radiografia no monitor é parte da cena) */
+.scrolly__img--contain img { object-fit: contain; }
+/* Etiqueta do estado que domina a imagem fica em destaque */
+.ba__label { transition: opacity .25s var(--ease); }
+.ba.is-depois .ba__label--before, .ba:not(.is-depois) .ba__label--after { opacity: .5; }

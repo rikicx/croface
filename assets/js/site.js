@@ -453,14 +453,14 @@
   function initBeforeAfter() {
     document.querySelectorAll('[data-ba]').forEach(function (ba) {
       var range = ba.querySelector('.ba__range');
-      function set(v) { ba.style.setProperty('--pos', v + '%'); if (range) range.value = v; }
+      function set(v) { ba.style.setProperty('--pos', v + '%'); ba.classList.toggle('is-depois', v > 50); if (range) range.value = v; }
       if (range) range.addEventListener('input', function () { set(range.value); });
       ba.addEventListener('pointermove', function (e) {
         if (e.pointerType !== 'mouse') return; // no toque, o próprio controle deslizante já acompanha o dedo
         var r = ba.getBoundingClientRect();
         set(Math.max(0, Math.min(100, ((e.clientX - r.left) / r.width) * 100)).toFixed(1));
       });
-      set(50);
+      set(20); // começa mostrando o antes; puxar para DEPOIS revela o resultado
     });
   }
 

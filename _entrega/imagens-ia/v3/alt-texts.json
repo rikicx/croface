@@ -1,0 +1,49 @@
+{
+  "audience": "Adultos acima dos 50 anos",
+  "public_ai_reference": false,
+  "comparison_caption": "Comparação ilustrativa do tratamento. Cada caso depende de avaliação individual.",
+  "exam_caption": "Esclarecimento de dúvidas sobre exames odontológicos. Imagem ilustrativa.",
+  "surgery_caption": "Conversa sobre as etapas do tratamento odontológico. Imagem ilustrativa.",
+  "images": [
+    {
+      "key": "antes-implante-ia-v3",
+      "alt": "Pessoa acima dos 50 anos com ausência de um dente superior no sorriso."
+    },
+    {
+      "key": "depois-implante-ia-v3",
+      "alt": "Sorriso completo com reposição de um dente superior por implante dentário."
+    },
+    {
+      "key": "antes-protese-ia-v3",
+      "alt": "Prótese dentária superior com dentes desgastados e amarelados."
+    },
+    {
+      "key": "depois-protese-ia-v3",
+      "alt": "Prótese dentária superior renovada, com dentes mais claros e contornos naturais."
+    },
+    {
+      "key": "antes-clinica-ia-v3",
+      "alt": "Dente da frente com a borda lascada em um sorriso adulto."
+    },
+    {
+      "key": "depois-clinica-ia-v3",
+      "alt": "Dente da frente com a borda recomposta por restauração dentária."
+    },
+    {
+      "key": "antes-prevencao-ia-v3",
+      "alt": "Tártaro e manchas superficiais nos dentes inferiores, próximos à gengiva."
+    },
+    {
+      "key": "depois-prevencao-ia-v3",
+      "alt": "Dentes inferiores com aspecto limpo após limpeza dentária e remoção de tártaro."
+    },
+    {
+      "key": "consulta-3-exames-ia-v3",
+      "alt": "Mulher com mais de 50 anos conversa com a dentista sobre uma radiografia odontológica."
+    },
+    {
+      "key": "cirurgia-1-avaliacao-ia-v3",
+      "alt": "Homem acima dos 50 anos conversa com o dentista sobre o planejamento de uma cirurgia odontológica."
+    }
+  ]
+}

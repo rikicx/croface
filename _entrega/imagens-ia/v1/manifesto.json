@@ -1,0 +1,377 @@
+{
+  "date": "2026-10-20",
+  "generation": "built-in image_gen",
+  "status": "Assets prepared; HTML/CSS/JS not changed in this task",
+  "assets": [
+    {
+      "key": "consulta-3-exames-ia",
+      "original": "_entrega/imagens-ia/originais/consulta-3-exames-ia.png",
+      "native_width": 1448,
+      "native_height": 1086,
+      "ai_generated": true,
+      "exports": [
+        {
+          "path": "assets/img/ia/consulta-3-exames-ia.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 102102,
+          "sha256": "321507fd037557caec86001d9c2b9f88f8a45430be28769997d6d6e756c46b13"
+        },
+        {
+          "path": "assets/img/ia/consulta-3-exames-ia.jpg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 291985,
+          "sha256": "d039273ccf77b624ab1c81600d1d274517bc4a0eb166a39fe050e15a0a1758c8"
+        },
+        {
+          "path": "assets/img/ia/consulta-3-exames-ia-720.webp",
+          "width": 720,
+          "height": 540,
+          "bytes": 37978,
+          "sha256": "f6e04d6968fe8f03c8eb98d910a5a579539e729953b8aca7b8a9160dc482e3cc"
+        },
+        {
+          "path": "assets/img/ia/consulta-3-exames-ia-720.jpg",
+          "width": 720,
+          "height": 540,
+          "bytes": 98168,
+          "sha256": "501e0470567f7961c19d5c97477ba615a62ad2200592624b6373a36bc67b4177"
+        }
+      ]
+    },
+    {
+      "key": "cirurgia-1-avaliacao-ia",
+      "original": "_entrega/imagens-ia/originais/cirurgia-1-avaliacao-ia.png",
+      "native_width": 1122,
+      "native_height": 1402,
+      "ai_generated": true,
+      "exports": [
+        {
+          "path": "assets/img/ia/cirurgia-1-avaliacao-ia.webp",
+          "width": 1120,
+          "height": 1400,
+          "bytes": 95202,
+          "sha256": "6b4040fe0646aca43dad52df22b58aa86b60bc791ad8bafb7847e74572e79084"
+        },
+        {
+          "path": "assets/img/ia/cirurgia-1-avaliacao-ia.jpg",
+          "width": 1120,
+          "height": 1400,
+          "bytes": 260160,
+          "sha256": "fd9d6f21832c5c692b5014e970917ab0bcfd861e4055985a1b83707b02b6d967"
+        },
+        {
+          "path": "assets/img/ia/cirurgia-1-avaliacao-ia-640.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 42298,
+          "sha256": "eb89d3bbc2608d2e6a11a97d7d36d2022241e773a9f30b484bbb3084e4eea1d6"
+        },
+        {
+          "path": "assets/img/ia/cirurgia-1-avaliacao-ia-640.jpg",
+          "width": 640,
+          "height": 800,
+          "bytes": 106155,
+          "sha256": "f160ae2b66f6ee9e8371cabccf308374b7f9d4741eb7dc8e89d2f24238887688"
+        }
+      ]
+    },
+    {
+      "key": "antes-implante-ia",
+      "original": "_entrega/imagens-ia/originais/antes-implante-ia.png",
+      "native_width": 1448,
+      "native_height": 1086,
+      "ai_generated": true,
+      "exports": [
+        {
+          "path": "assets/img/ia/antes-implante-ia.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 94782,
+          "sha256": "10fcc170c4327e86fd87b66e9808df5f5dbeb6094ed1df79cb1ad9aa1ea73572"
+        },
+        {
+          "path": "assets/img/ia/antes-implante-ia.jpg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 299017,
+          "sha256": "2a9f0f05032162432529cce3565435edb1ba0249cd894d4691f858b9080afe99"
+        },
+        {
+          "path": "assets/img/ia/antes-implante-ia-720.webp",
+          "width": 720,
+          "height": 540,
+          "bytes": 32272,
+          "sha256": "3132d822080a431d8839a0845956c1c2803245a062f07a62c3b5ccf31b993015"
+        },
+        {
+          "path": "assets/img/ia/antes-implante-ia-720.jpg",
+          "width": 720,
+          "height": 540,
+          "bytes": 94186,
+          "sha256": "d44c3121222a0b3a60ddda5d818deb42e5b7d7cbeff7ea087c5fe1805f2e7989"
+        }
+      ]
+    },
+    {
+      "key": "depois-implante-ia",
+      "original": "_entrega/imagens-ia/originais/depois-implante-ia.png",
+      "native_width": 1448,
+      "native_height": 1086,
+      "ai_generated": true,
+      "exports": [
+        {
+          "path": "assets/img/ia/depois-implante-ia.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 87042,
+          "sha256": "0b7bbeac4ef27fcb127bf44c046bc3f45080d7d6b1257f4328517c312763d5f6"
+        },
+        {
+          "path": "assets/img/ia/depois-implante-ia.jpg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 278661,
+          "sha256": "03e80e315002027011ec9fad935e7c9a0a21189da2f18a68d0f5307320a163d1"
+        },
+        {
+          "path": "assets/img/ia/depois-implante-ia-720.webp",
+          "width": 720,
+          "height": 540,
+          "bytes": 29846,
+          "sha256": "ccbe3c4d58d317cd7dd269f2f059abbce8ac47faa953a567d906a34938874649"
+        },
+        {
+          "path": "assets/img/ia/depois-implante-ia-720.jpg",
+          "width": 720,
+          "height": 540,
+          "bytes": 90518,
+          "sha256": "c2673635e420edd9f26137b349bc96fc3430f430568b99ccf05fe8e71ccb9653"
+        }
+      ]
+    },
+    {
+      "key": "antes-protese-ia",
+      "original": "_entrega/imagens-ia/originais/antes-protese-ia.png",
+      "native_width": 1448,
+      "native_height": 1086,
+      "ai_generated": true,
+      "exports": [
+        {
+          "path": "assets/img/ia/antes-protese-ia.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 147118,
+          "sha256": "076bca1be7dff2cd10c127ae4d00bf26fd7ce53ac1ab7bbc070c08b018503e8f"
+        },
+        {
+          "path": "assets/img/ia/antes-protese-ia.jpg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 377631,
+          "sha256": "64141b16d7d47c8989166fa623ce7bba579c30a9df2c4910bf6e4ec2b45cec15"
+        },
+        {
+          "path": "assets/img/ia/antes-protese-ia-720.webp",
+          "width": 720,
+          "height": 540,
+          "bytes": 48636,
+          "sha256": "1a162f0139cf761adf580d5cc2d511334507ee9dfab3402a1d76e710debbc6a9"
+        },
+        {
+          "path": "assets/img/ia/antes-protese-ia-720.jpg",
+          "width": 720,
+          "height": 540,
+          "bytes": 118061,
+          "sha256": "a0d9c200eb4991fa576272620f314df4724f38acf98bd8511e332a96f6a615b1"
+        }
+      ]
+    },
+    {
+      "key": "depois-protese-ia",
+      "original": "_entrega/imagens-ia/originais/depois-protese-ia.png",
+      "native_width": 1448,
+      "native_height": 1086,
+      "ai_generated": true,
+      "exports": [
+        {
+          "path": "assets/img/ia/depois-protese-ia.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 134002,
+          "sha256": "ce652e60118f56ede8553f584b7dd01d8acfbc55ccf135cb1882b6162025f243"
+        },
+        {
+          "path": "assets/img/ia/depois-protese-ia.jpg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 361076,
+          "sha256": "69de89ab84be7159176b1951258ab4664f2bb54f9d48591613c0415f2edeaad6"
+        },
+        {
+          "path": "assets/img/ia/depois-protese-ia-720.webp",
+          "width": 720,
+          "height": 540,
+          "bytes": 47876,
+          "sha256": "1f233abdfafcf3d14a403194972e887dc16d93e53bbc9623a4da2ae6a9e39a2d"
+        },
+        {
+          "path": "assets/img/ia/depois-protese-ia-720.jpg",
+          "width": 720,
+          "height": 540,
+          "bytes": 117360,
+          "sha256": "0a1a51e5f970bdf15f89681db358cea17c004fac18fa8592d0ce6c8e617a6976"
+        }
+      ]
+    },
+    {
+      "key": "antes-clinica-ia",
+      "original": "_entrega/imagens-ia/originais/antes-clinica-ia.png",
+      "native_width": 1448,
+      "native_height": 1086,
+      "ai_generated": true,
+      "exports": [
+        {
+          "path": "assets/img/ia/antes-clinica-ia.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 88366,
+          "sha256": "f186bc2938809ffa8df05c6b4821de40126fafdb19b1366d7f7d09550010f3b9"
+        },
+        {
+          "path": "assets/img/ia/antes-clinica-ia.jpg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 278201,
+          "sha256": "d7eb1df171ba4101fd51cb7c661b5e0b8297a27e28355a667da337924975460e"
+        },
+        {
+          "path": "assets/img/ia/antes-clinica-ia-720.webp",
+          "width": 720,
+          "height": 540,
+          "bytes": 32110,
+          "sha256": "b54c857a78d154e97c64003989a8849a21e39911d0be35ce9dbdd9b117631302"
+        },
+        {
+          "path": "assets/img/ia/antes-clinica-ia-720.jpg",
+          "width": 720,
+          "height": 540,
+          "bytes": 92534,
+          "sha256": "7712690fba50cdc8cd82d1909160c085e4eac514f91fd6c24c6763f85b1fbb59"
+        }
+      ]
+    },
+    {
+      "key": "depois-clinica-ia",
+      "original": "_entrega/imagens-ia/originais/depois-clinica-ia.png",
+      "native_width": 1448,
+      "native_height": 1086,
+      "ai_generated": true,
+      "exports": [
+        {
+          "path": "assets/img/ia/depois-clinica-ia.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 88398,
+          "sha256": "df07ce4d8c8c2c607c39bf633fba888d961f9261993b31c5e69223d5eec52619"
+        },
+        {
+          "path": "assets/img/ia/depois-clinica-ia.jpg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 268445,
+          "sha256": "e2e312d77e890f368f42dda010b74e87a731ff7c7aebaa335f2b5466ccb17545"
+        },
+        {
+          "path": "assets/img/ia/depois-clinica-ia-720.webp",
+          "width": 720,
+          "height": 540,
+          "bytes": 32256,
+          "sha256": "353176f6625ca73cb3be9da5c7d51c056c4292928d92299d494a058211beda2b"
+        },
+        {
+          "path": "assets/img/ia/depois-clinica-ia-720.jpg",
+          "width": 720,
+          "height": 540,
+          "bytes": 91882,
+          "sha256": "d94afa551272f409d1543013e658d0b46d7334e9c40f2fdf0b7074a00cb2a02d"
+        }
+      ]
+    },
+    {
+      "key": "antes-prevencao-ia",
+      "original": "_entrega/imagens-ia/originais/antes-prevencao-ia.png",
+      "native_width": 1448,
+      "native_height": 1086,
+      "ai_generated": true,
+      "exports": [
+        {
+          "path": "assets/img/ia/antes-prevencao-ia.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 147186,
+          "sha256": "828c353ce53c8ac94aaa661fe6f7c80ace3bb84aecee242ae4584aa1d2b00cf3"
+        },
+        {
+          "path": "assets/img/ia/antes-prevencao-ia.jpg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 379357,
+          "sha256": "f547ce480ed9c0d6242818894def990f04dd09e32d4359b987976d7f28f035d4"
+        },
+        {
+          "path": "assets/img/ia/antes-prevencao-ia-720.webp",
+          "width": 720,
+          "height": 540,
+          "bytes": 53356,
+          "sha256": "45f6b27498e4f91d0418f5caa26e284f583b8153933dbb5ed14e05e386be59d6"
+        },
+        {
+          "path": "assets/img/ia/antes-prevencao-ia-720.jpg",
+          "width": 720,
+          "height": 540,
+          "bytes": 122603,
+          "sha256": "c8f3c28b0ae36a2db93085817e1569f7f2c3c187663a8ab01d395c656a75a4b0"
+        }
+      ]
+    },
+    {
+      "key": "depois-prevencao-ia",
+      "original": "_entrega/imagens-ia/originais/depois-prevencao-ia.png",
+      "native_width": 1448,
+      "native_height": 1086,
+      "ai_generated": true,
+      "exports": [
+        {
+          "path": "assets/img/ia/depois-prevencao-ia.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 132732,
+          "sha256": "0d43d1e19d48bea8b4b31dd254fe0ab9f3f466e30fd0a634ff2cbad7d2f2423f"
+        },
+        {
+          "path": "assets/img/ia/depois-prevencao-ia.jpg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 351437,
+          "sha256": "a6c04d575dd2aa09e2d8b3180996d0249fa428ff655d0c26b2cf6a39c02ca5df"
+        },
+        {
+          "path": "assets/img/ia/depois-prevencao-ia-720.webp",
+          "width": 720,
+          "height": 540,
+          "bytes": 49208,
+          "sha256": "602bd3aa63ff18974296cd8c007b4640ee65356982faa8c476017682fda0ad9a"
+        },
+        {
+          "path": "assets/img/ia/depois-prevencao-ia-720.jpg",
+          "width": 720,
+          "height": 540,
+          "bytes": 118556,
+          "sha256": "e910e1ff64e88ae62547147058e359e47e8e9b5bef046a4bbbfba7da04132ca4"
+        }
+      ]
+    }
+  ]
+}
