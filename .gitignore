@@ -13,3 +13,10 @@ _entrega/imagens-ia/**/originais/
 _entrega/imagens-ia/originais/
 assets/img/ia/*.jpg
 assets/img/ia/*.webp
+
+# Cópia autocontida gerada por _entrega/gerar-copia-html.py (arquivos grandes; gerar de novo quando precisar)
+_entrega/copia-html/
+_entrega/croface-copia-html.zip
+
+# Pacote para o servidor gerado por _entrega/gerar-pacote-servidor.py (gerar de novo quando mudar o site)
+_entrega/croface-site.zip

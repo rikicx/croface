@@ -205,6 +205,8 @@ mark.tbc { background: #d9f3fa; color: var(--ink); padding: 0 .25em; border: 1px
 .utility__link .icon { width: 1rem; height: 1rem; color: var(--accent); }
 @media (max-width: 767px) { .utility__link { padding: 0 .875rem; } .utility__link--address, .utility__num { display: none; } }
 @media (max-width: 479px) { .utility__link { padding: 0 1rem; } .utility__link .icon { width: 1.25rem; height: 1.25rem; } .utility__txt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; } }
+/* Mobile: WhatsApp e Ligar dividem a barra em duas metades iguais, cada ícone no centro da sua. */
+@media (max-width: 767px) { .utility__link { flex: 1 1 0; justify-content: center; padding: 0; } }
 
 /* Navegação */
 .nav { display: none; }
@@ -601,6 +603,9 @@ body.menu-open { overflow: hidden; }
 .hero__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: 2.25rem; }
 .hero__legal { margin: 1.75rem 0 0; font-size: .8125rem; letter-spacing: .02em; color: var(--on-dark-2); }
 @media (max-width: 479px) { .hero__actions .btn { width: 100%; } .hero__content { padding-top: calc(var(--hdr-h) + 2rem); } }
+/* Tela estreita: a foto (16:10) é cortada nas laterais; desloca o recorte para o rosto,
+   que fica a ~72% da largura da imagem, e o deixa no centro da tela. */
+@media (max-width: 959px) { .hero__media img { object-position: 80% 50%; } }
 
 /* 1. Queixas */
 .symptoms { display: grid; gap: .875rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15.5rem), 1fr)); }

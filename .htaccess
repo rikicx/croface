@@ -14,8 +14,11 @@ ErrorDocument 404 /404.html
   RewriteEngine On
 
   # 1) HTTP -> HTTPS e www -> sem www, em um único redirecionamento 301.
-  #    O teste de X-Forwarded-Proto evita loop quando a Locaweb termina o TLS
-  #    em um proxy na frente do Apache.
+  #    A Locaweb termina o TLS num proxy (nginx) na frente do Apache e documenta
+  #    o teste pela porta 80 ("Como forçar o HTTPS - Hospedagem de Sites").
+  #    As três condições juntas só redirecionam o que com certeza chegou em
+  #    HTTP; na dúvida, não redirecionam (sem risco de loop).
+  RewriteCond %{SERVER_PORT} =80
   RewriteCond %{HTTPS} !=on
   RewriteCond %{HTTP:X-Forwarded-Proto} !=https
   RewriteRule ^ https://croface.com.br%{REQUEST_URI} [L,R=301,NE]
@@ -26,6 +29,11 @@ ErrorDocument 404 /404.html
   # 2) Endereços do site antigo -> página nova (preserva links e buscas antigas).
   RewriteRule ^contato\.htm$ /#contato [L,R=301,NE]
   RewriteRule ^(top|main|index)\.htm$ / [L,R=301]
+
+  # 2b) Endereços da cópia em arquivo único publicada em nov/2026
+  #     (/implante-dentario-vila-mariana.html etc.) -> página nova (/implante-dentario-vila-mariana/).
+  #     Vale mesmo que os arquivos antigos continuem no servidor: o redirecionamento vem antes.
+  RewriteRule ^(implante-dentario-vila-mariana|protese-dentaria-vila-mariana|clinica-geral-vila-mariana|limpeza-e-prevencao-vila-mariana|cirurgias-odontologicas-vila-mariana|dentista-para-idosos-vila-mariana|como-atendemos)\.html$ /$1/ [L,R=301]
 
   # 3) .../index.html -> .../ (evita URL duplicada, em qualquer pasta)
   RewriteCond %{THE_REQUEST} \s/(.*/)?index\.html[\s?] [NC]

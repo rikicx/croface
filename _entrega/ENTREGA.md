@@ -4,6 +4,25 @@
 
 ---
 
+## Pacote para o cliente publicar sozinho (16/11/2026)
+
+**O que mandar ao cliente:** `_entrega/croface-site.zip` + `_entrega/COMO-PUBLICAR-CROFACE.pdf` (passo a passo sem termos técnicos). O cliente não passa o login da Locaweb, então ele mesmo publica.
+
+- **ZIP = site original**, com os arquivos na raiz do ZIP: o cliente envia para `public_html` e clica em **Extrair** no Gerenciador de arquivos da Locaweb. Entram 161 arquivos (11,8 MB): as 9 páginas, `assets/` só com o que as páginas usam, `.htaccess`, `robots.txt`, `sitemap.xml` e favicons. Para gerar de novo: `python3 _entrega/gerar-pacote-servidor.py`. O script para com erro se faltar algum arquivo ou página citada. O ZIP fica fora do git.
+- **Por que não a cópia em arquivo único:** em 16/11 ela estava publicada (home de 2,1 MB). As canonicals e o sitemap apontam para `/pagina/`, que dava 404, porque as páginas estavam em `/pagina.html`. Faltavam `robots.txt`, `sitemap.xml` e `.htaccess`, e com a CSP do `.htaccess` a cópia ficaria sem CSS e sem JS. O `.htaccess` agora redireciona com 301 os endereços `/pagina.html` dessa cópia para `/pagina/`, então o cliente não precisa apagar nada.
+- **Diagnóstico do "Não seguro" (16/11):** DNS e NS já estão na Locaweb, mas não há certificado emitido. O servidor entrega o certificado genérico `*.websiteseguro.com`. A correção é o cliente clicar em **Emitir Let's Encrypt** (Etapa 1 do PDF) **antes** de subir o ZIP, porque o `.htaccess` força HTTPS.
+- **Redirecionamento HTTPS:** o bloco 1 do `.htaccess` agora exige também `SERVER_PORT = 80`, como no artigo da Locaweb "Como forçar o HTTPS – Hospedagem de Sites". Com isso, só redireciona o que com certeza chegou em HTTP, sem risco de loop. O servidor é nginx na frente do Apache (`/.ht*` responde 403), então o `.htaccess` é lido.
+- **Teste local do pacote extraído**, servido com a mesma CSP do `.htaccess`: 9 páginas sem nenhum link ou arquivo quebrado e sem violação de CSP (relatório *report-only*), em 375 px e 600 px.
+- **Ajustes de mobile (pedido de 16/11):** no hero da home, a foto agora fica centralizada no rosto em telas de até 959 px (`object-position: 80%`). No topo, até 767 px, WhatsApp e Ligar dividem a barra em duas metades iguais, cada ícone no centro da sua.
+
+---
+
+## Cópia autocontida em HTML (11/11/2026)
+
+`_entrega/copia-html/` tem uma cópia do site em que **cada página é um único `.html`** que abre direto do disco, sem servidor nem internet: CSS, fontes, JS (todas as animações), ícones e fotos vão embutidos no próprio arquivo. SEO, textos e alt são idênticos ao original. Para gerar de novo depois de mudar o site: `python3 _entrega/gerar-copia-html.py` (o script confere título, metas, JSON-LD e cada imagem e para com erro se algo não bater). O mesmo script gera `_entrega/croface-copia-html.zip` (a pasta compactada, para enviar). Detalhes e decisões em `copia-html/LEIA-ME.txt`. **Não publicar a cópia no servidor:** a CSP do `.htaccess` bloqueia CSS/JS embutidos e o desempenho é pior; o site publicado continua sendo o original. A pasta fica fora do git (`.gitignore`).
+
+---
+
 ## v4 — Ajustes do cliente (13/10/2026)
 
 **O que mudou**
@@ -46,7 +65,8 @@
 - [x] **Home sem [CONFIRMAR]:** retirados o aviso da equipe multidisciplinar (nomes/CRO continuam pendentes), o ponto de referência na rua, o aviso de especialidade do Dr. Marcelo e os campos vazios do Dr. Wesley. As coordenadas `geo` (que estavam como texto de placeholder e invalidavam os dados estruturados) foram removidas de todas as páginas até termos latitude/longitude reais.
 - [x] **Curadoria de imagens (14/10):** trocadas 4 fotos de banco genéricas (idosos posando em fundo liso, sem relação com a clínica) e 3 placeholders por recortes de fotos reais da CROFACE: `consulta-4-diagnostico` (Dr. Marcelo no consultório, logo no monitor), `consulta-5-plano` e `prevencao-3-orientacao` (Dra. Renata em atendimento), `cirurgia-3-pos` (Dr. Wesley no consultório), `cirurgia-procedimento` e `implante-2-cirurgia` (consultório), `implante-1-avaliacao` (Dr. Marcelo em atendimento). Legendas (alt) reescritas para descrever o que aparece de fato.
 - [x] **Logo oficial** (CorelDRAW, 10/11/2025) aplicado: versão horizontal no cabeçalho (`logo-croface-h.svg`, montada a partir das peças do logo: símbolo à esquerda, nome à direita), versão vertical original no rodapé e na 404 (`logo-croface.svg`), símbolo no favicon/ícone do celular e PNG 600×600 para o Google (`logo-croface.png`). **Confirmar com a clínica se a versão horizontal pode ser usada.** O logo diz "Odontologia"; o site mantém o nome "CROFACE — Centro de Reabilitação Orofacial" no texto.
-- [x] Convênios: Plena Saúde, Sempre Odonto, Ideal Odonto, OdontoGroup, Dental Plus, Dental Uni e Dentalpar. Os 6 logos foram baixados dos sites oficiais das operadoras (`assets/img/convenios/`).
+- [x] Convênios: Plena Saúde, Ideal Odonto, OdontoGroup, Dental Plus, Dental Uni e Dentalpar. Os logos foram baixados dos sites oficiais das operadoras (`assets/img/convenios/`).
+- [x] **Sempre Odonto retirada (12/11/2026, a pedido):** saiu o logo da seção de convênios da home e o nome da resposta "Atendem convênio?" das 7 páginas de serviço. Os arquivos do logo foram apagados de `assets/img/convenios/` (continuam no histórico do git). Datas do `sitemap.xml` atualizadas.
 - [x] **Dental Plus:** logo enviado pelo cliente e aplicado (`convenios/dental-plus`). Site oficial da operadora: planodentalplus.com.br (Santo André, SP; selo ANS no site, sem número publicado). O domínio dentalplus.com.br é de outra empresa, uma loja de produtos.
 - [ ] Pedir a cada operadora o kit de marca oficial: o contrato de credenciamento costuma ter regras de uso do logo. O arquivo da Dentalpar tem baixa resolução (168×33).
 - [ ] Como funciona a urgência fora do horário.
